@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/* ----------------------------------------------------------------------------
+   Design tokens (from the PolyPOP Figma variables)
+   These map to Tailwind v4 utilities, e.g. --color-teal -> bg-teal / text-teal,
+   --font-display -> font-display.
+---------------------------------------------------------------------------- */
+@theme {
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+  --font-body: "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    sans-serif;
+
+  /* Foundation / Green */
+  --color-teal: #1fb3ae;
+  --color-teal-bright: #2cd4ce;
+  --color-teal-deep: #19a8a3;
+  --color-teal-light: #e9f7f7;
+  --color-teal-light-active: #bae7e6;
+  /* Darker teal that meets WCAG AA (>=4.5:1) for text/links on white */
+  --color-teal-text: #0e7a74;
+
+  /* Neutrals */
+  --color-ink: #221f1f;
+  --color-ink-black: #0b0a0a;
+
+  /* Primary / Purple (decorative bubbles) */
+  --color-brand-purple: #8268c9;
+  --color-brand-purple-light: #a08dd6;
+  --color-brand-purple-dark: #6544bc;
+
+  /* Motion */
+  --animate-fade-in: fade-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-rise-in: rise-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-white font-display text-ink antialiased;
+  }
+
+  /* Visible keyboard focus for all interactive elements (high-contrast on
+     both white and teal surfaces) */
+  a:focus-visible,
+  button:focus-visible,
+  [role="radio"]:focus-visible {
+    outline: 3px solid var(--color-teal-text);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  /* Honour reduced-motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
