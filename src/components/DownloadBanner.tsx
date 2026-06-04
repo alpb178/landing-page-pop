@@ -18,9 +18,22 @@ export default function DownloadBanner({ content }: DownloadBannerProps) {
       />
 
       <div className="relative mx-auto max-w-[1344px]">
-        {/* Gradient darkened so white text clears WCAG AA on the lightest stop */}
-        <div className="relative rounded-[32px] bg-[linear-gradient(155deg,#19a39e_0%,#0e7a74_72%)] px-7 py-12 shadow-[0_24px_60px_-24px_rgba(14,122,116,0.7)] sm:px-10 lg:px-16 lg:py-14">
-          <div className="grid items-center gap-10 lg:grid-cols-2">
+        <div className="relative rounded-[32px] bg-teal-deep px-7 py-12 shadow-[0_24px_60px_-24px_rgba(14,122,116,0.7)] sm:px-10 lg:px-16 lg:py-14">
+          {/* Background: light cyan -> teal gradient with a wavy glass texture
+              screened on top, per the updated Figma banner (node 9475:14779). */}
+          <div className="absolute inset-0 overflow-hidden rounded-[32px]">
+            <div className="absolute inset-0 bg-[linear-gradient(105deg,#8ed4f1_11%,#47b9b5_100%)]" />
+            <img
+              src="/assets/banner-texture.png"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              className="absolute inset-0 h-full w-full object-cover opacity-[0.32] mix-blend-screen"
+            />
+          </div>
+
+          <div className="relative grid items-center gap-10 lg:grid-cols-2">
             {/* Copy + badges */}
             <div className="flex flex-col gap-8">
               <h2 className="max-w-[500px] text-3xl font-bold leading-[1.2] text-white sm:text-4xl lg:text-[36px]">
@@ -30,8 +43,10 @@ export default function DownloadBanner({ content }: DownloadBannerProps) {
               <DownloadBadges variant="banner" />
             </div>
 
-            {/* Devices — overlap and rise above the banner on desktop */}
+            {/* Devices — two overlapping phones that rise above the banner.
+                Profile sits behind/lower-left, the "match" screen in front/right. */}
             <div className="relative hidden h-[300px] lg:block">
+              {/* Profile device — behind, lower, overlapped by the match phone */}
               <img
                 key={`${content.id}-small`}
                 src={content.banner.small}
@@ -39,27 +54,28 @@ export default function DownloadBanner({ content }: DownloadBannerProps) {
                 aria-hidden="true"
                 loading="lazy"
                 decoding="async"
-                className="absolute -top-14 left-0 z-0 w-[230px] animate-fade-in drop-shadow-xl xl:left-10 xl:w-[255px]"
+                className="absolute bottom-[-32px] right-[150px] z-0 w-[270px] animate-fade-in drop-shadow-xl xl:right-[170px] xl:w-[288px]"
               />
+              {/* "¡Es un match!" device — in front, raised, right */}
               <img
                 key={`${content.id}-big`}
                 src={content.banner.big}
                 alt={`Descarga PolyPOP — ${content.label}`}
                 loading="lazy"
                 decoding="async"
-                className="absolute -top-32 right-0 z-10 w-[285px] animate-fade-in drop-shadow-2xl xl:right-10 xl:w-[310px]"
+                className="absolute -top-28 right-0 z-10 w-[316px] animate-fade-in drop-shadow-2xl xl:right-6 xl:w-[338px]"
               />
             </div>
           </div>
 
           {/* Mobile / tablet device preview */}
-          <div className="mt-10 flex justify-center lg:hidden">
+          <div className="relative mt-10 flex justify-center lg:hidden">
             <img
               src={content.banner.big}
               alt={`Descarga PolyPOP — ${content.label}`}
               loading="lazy"
               decoding="async"
-              className="w-[220px] drop-shadow-2xl sm:w-[240px]"
+              className="w-[230px] drop-shadow-2xl sm:w-[250px]"
             />
           </div>
         </div>

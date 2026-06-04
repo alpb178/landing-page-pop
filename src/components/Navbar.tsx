@@ -11,7 +11,13 @@ export default function Navbar() {
         className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-6 py-4 lg:px-12 lg:py-5"
       >
         <a href="#inicio" className="flex shrink-0 items-center" aria-label="PolyPOP — inicio">
-          <img src="/assets/logo.svg" alt="" className="h-11 w-auto sm:h-[52px]" />
+          <img
+            src="/assets/logo.svg"
+            alt=""
+            width={79}
+            height={52}
+            className="h-11 w-[67px] object-contain sm:h-[52px] sm:w-[79px]"
+          />
         </a>
 
         {/* Desktop links */}

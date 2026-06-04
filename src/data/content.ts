@@ -73,17 +73,19 @@ export const MODES: Record<ModeId, ModeContent> = {
         body: "Expresa tus ideas en hilos abiertos a la comunidad.",
       },
     ],
+    // The download banner is now identical across both modes — a profile
+    // device behind (small) and the "¡Es un match!" device in front (big).
     banner: {
-      small: "/assets/circle-banner-small.png",
-      big: "/assets/circle-banner-big.png",
+      small: "/assets/banner-phone-profile.png",
+      big: "/assets/banner-phone-match.png",
     },
   },
 
   date: {
     id: "date",
     label: "POP Date",
-    // Figma exported byte-identical assets for the date hero and date banner-small,
-    // so we reference the shared circle files instead of shipping duplicate PNGs.
+    // Figma exported byte-identical assets for the date hero,
+    // so we reference the shared circle file instead of shipping a duplicate PNG.
     hero: "/assets/circle-hero.png",
     gallery: {
       left: "/assets/date-mockup-left.png",
@@ -110,8 +112,8 @@ export const MODES: Record<ModeId, ModeContent> = {
       },
     ],
     banner: {
-      small: "/assets/circle-banner-small.png",
-      big: "/assets/date-mockup-center.png",
+      small: "/assets/banner-phone-profile.png",
+      big: "/assets/banner-phone-match.png",
     },
   },
 };
