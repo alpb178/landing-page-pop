@@ -15,18 +15,28 @@ const COLUMNS = [
 /** Store links are external; nav anchors stay in-page. */
 const isExternal = (href: string) => /^https?:/.test(href);
 
+/**
+ * Footer matching the Figma design (node 9483:16911): a teal gradient surface
+ * with a white logo, white link columns, and a frosted QR card.
+ */
 export default function Footer() {
   return (
-    <footer className="relative bg-white font-body">
+    <footer className="relative bg-gradient-to-b from-[#1fb3ae] to-[#168a86] font-body text-white">
       <div className="mx-auto w-full max-w-[1440px] px-6 py-16 lg:px-12 lg:py-24">
         <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
           {/* Logo + link columns */}
           <div className="flex flex-col gap-10 sm:flex-row sm:gap-16 lg:gap-24">
-            <img src="/assets/logo.svg" alt="PolyPOP" className="h-[52px] w-auto" />
+            <img
+              src="/assets/logo-white.svg"
+              alt="PolyPOP"
+              width={133}
+              height={88}
+              className="h-[72px] w-[108px] object-contain lg:h-[88px] lg:w-[133px]"
+            />
             <nav aria-label="Enlaces del pie" className="flex gap-16 sm:gap-20">
               {COLUMNS.map((col) => (
-                <div key={col.title} className="flex flex-col gap-5">
-                  <p className="text-xl font-bold text-ink-black">{col.title}</p>
+                <div key={col.title} className="flex flex-col gap-6">
+                  <p className="text-xl font-bold text-white">{col.title}</p>
                   <ul className="flex flex-col gap-[18px]">
                     {col.links.map((link) => (
                       <li key={link.label}>
@@ -35,7 +45,7 @@ export default function Footer() {
                           {...(isExternal(link.href)
                             ? { target: "_blank", rel: "noopener noreferrer" }
                             : {})}
-                          className="text-lg text-ink-black transition-colors hover:text-teal-text"
+                          className="text-lg text-white/90 transition-colors hover:text-white"
                         >
                           {link.label}
                         </a>
@@ -47,8 +57,8 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* QR card */}
-          <div className="flex w-full items-center gap-4 self-start rounded-[32px] bg-teal px-5 py-4 sm:w-auto sm:px-6">
+          {/* Frosted QR card */}
+          <div className="flex w-full items-center gap-4 self-start rounded-[16px] bg-white/10 px-5 py-4 ring-1 ring-inset ring-white/20 backdrop-blur-sm sm:w-auto sm:px-6">
             <div className="size-[120px] shrink-0 rounded-2xl bg-white p-2 sm:size-[200px] sm:p-2.5">
               <QrPlaceholder className="h-full w-full" />
             </div>
@@ -59,13 +69,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 flex flex-col gap-2 border-t border-black/10 pt-6 text-sm text-ink/70 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-2 border-t border-white/15 pt-6 text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} PolyPOP. Todos los derechos reservados.</p>
           <div className="flex gap-6">
-            <a href="#" className="transition-colors hover:text-teal-text">
+            <a href="#" className="transition-colors hover:text-white">
               Privacidad
             </a>
-            <a href="#" className="transition-colors hover:text-teal-text">
+            <a href="#" className="transition-colors hover:text-white">
               Términos
             </a>
           </div>
