@@ -72,10 +72,10 @@ export default function Footer() {
         <div className="mt-12 flex flex-col gap-2 border-t border-white/15 pt-6 text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} PolyPOP. Todos los derechos reservados.</p>
           <div className="flex gap-6">
-            <a href="#" className="transition-colors hover:text-white">
+            <a href="/privacidad.html" className="transition-colors hover:text-white">
               Privacidad
             </a>
-            <a href="#" className="transition-colors hover:text-white">
+            <a href="/terminos.html" className="transition-colors hover:text-white">
               Términos
             </a>
           </div>
