@@ -21,6 +21,11 @@ export default function App() {
   const [mode, setMode] = useState<ModeId>(initialMode);
   const content = MODES[mode];
 
+  // Restore the home tab title when navigating back from another SPA route.
+  useEffect(() => {
+    document.title = "PolyPOP · Conecta con tu POP perfecto";
+  }, []);
+
   // Keep the URL in sync so the active mode is shareable/deep-linkable.
   useEffect(() => {
     const url = new URL(window.location.href);
