@@ -127,6 +127,22 @@ export const STORE_LINKS = {
     "https://play.google.com/store/apps/details?id=com.tikneo.popmobile",
 } as const;
 
+/**
+ * Single "smart" download QR for the footer. It encodes the absolute URL of
+ * the /descargar redirect page (see DOWNLOAD_REDIRECT), which detects the
+ * scanning device and forwards it to the right store. The SVG is a real,
+ * scannable QR living in /public/assets.
+ */
+export const DOWNLOAD_QR = {
+  src: "/assets/qr-descargar.svg",
+  alt: "Código QR para descargar PolyPOP (iOS o Android)",
+  /** Where the QR points; also used as the in-page link for desktop clicks. */
+  href: "/descargar",
+} as const;
+
+/** Contact email for support and legal enquiries. */
+export const SUPPORT_EMAIL = "apple@tikneo.com";
+
 /** Shared navigation links (hero, footer, mobile menu). */
 export const NAV_LINKS = [
   { label: "Inicio", href: "#inicio" },

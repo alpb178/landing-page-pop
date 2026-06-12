@@ -1,0 +1,33 @@
+# Example nginx config for the PolyPOP landing page (SPA).
+#
+# This is a single-page app: routing is handled client-side by react-router.
+# nginx must serve /index.html for any path that isn't a real file, otherwise
+# deep links and reloads (e.g. /soporte, /privacidad, /descargar) return 404.
+#
+# Adapt `server_name` and `root` to your deployment, then reload nginx.
+
+server {
+    listen 80;
+    server_name polypop.corpsc.com;
+
+    # Path to the built assets (output of `npm run build`).
+    root /var/www/polypop/dist;
+    index index.html;
+
+    # SPA fallback: try the real file, then a directory, else index.html.
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Cache fingerprinted build assets aggressively; they are content-hashed.
+    location /assets/ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        try_files $uri =404;
+    }
+
+    # Never cache the HTML shell so new deploys are picked up immediately.
+    location = /index.html {
+        add_header Cache-Control "no-cache";
+    }
+}
