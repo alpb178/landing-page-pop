@@ -2,7 +2,7 @@
 #
 # This is a single-page app: routing is handled client-side by react-router.
 # nginx must serve /index.html for any path that isn't a real file, otherwise
-# deep links and reloads (e.g. /soporte, /privacidad, /descargar) return 404.
+# deep links and reloads (e.g. /support, /privacy, /download) return 404.
 #
 # Adapt `server_name` and `root` to your deployment, then reload nginx.
 

@@ -14,10 +14,10 @@ createRoot(document.getElementById("root")!).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/privacidad" element={<LegalPage doc={PRIVACY_DOC} />} />
-        <Route path="/terminos" element={<LegalPage doc={TERMS_DOC} />} />
-        <Route path="/soporte" element={<SupportPage />} />
-        <Route path="/descargar" element={<DownloadRedirect />} />
+        <Route path="/privacy" element={<LegalPage doc={PRIVACY_DOC} />} />
+        <Route path="/terms" element={<LegalPage doc={TERMS_DOC} />} />
+        <Route path="/support" element={<SupportPage />} />
+        <Route path="/download" element={<DownloadRedirect />} />
         {/* Unknown paths fall back to the home page. */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

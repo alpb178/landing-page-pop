@@ -6,7 +6,7 @@ const inputClasses =
   "w-full rounded-xl border border-black/10 bg-white px-4 py-3 text-base text-ink outline-none transition-colors placeholder:text-ink/40 focus:border-teal focus:ring-2 focus:ring-teal/30";
 
 /**
- * Support page (/soporte). The landing is fully static (no backend), so
+ * Support page (/support). The landing is fully static (no backend), so
  * the form composes a pre-filled email and opens the visitor's mail client via
  * a mailto: link. A direct email link is offered as a fallback.
  */

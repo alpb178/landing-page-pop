@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { STORE_LINKS } from "../data/content";
 
 /**
- * /descargar — the target of the footer QR. Detects the *scanning* device and
+ * /download — the target of the footer QR. Detects the *scanning* device and
  * redirects it to the matching store; on desktop / unknown devices it shows
  * both store buttons instead of redirecting.
  */
