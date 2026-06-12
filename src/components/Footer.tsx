@@ -1,5 +1,5 @@
-import { NAV_LINKS, STORE_LINKS } from "../data/content";
-import QrPlaceholder from "./QrPlaceholder";
+import { Link } from "react-router-dom";
+import { DOWNLOAD_QR, NAV_LINKS, STORE_LINKS } from "../data/content";
 
 const COLUMNS = [
   { title: "Producto", links: NAV_LINKS },
@@ -57,11 +57,16 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* Frosted QR card */}
+          {/* Frosted QR card — one smart code that routes to the right store */}
           <div className="flex w-full items-center gap-4 self-start rounded-[16px] bg-white/10 px-5 py-4 ring-1 ring-inset ring-white/20 backdrop-blur-sm sm:w-auto sm:px-6">
-            <div className="size-[120px] shrink-0 rounded-2xl bg-white p-2 sm:size-[200px] sm:p-2.5">
-              <QrPlaceholder className="h-full w-full" />
-            </div>
+            <a
+              href={DOWNLOAD_QR.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="size-[120px] shrink-0 rounded-2xl bg-white p-2 sm:size-[200px] sm:p-2.5"
+            >
+              <img src={DOWNLOAD_QR.src} alt={DOWNLOAD_QR.alt} className="h-full w-full" />
+            </a>
             <p className="flex-1 text-right text-base font-bold leading-[1.2] text-white sm:w-[197px] sm:flex-none sm:text-xl">
               Escanea el código QR para descargar la aplicación
             </p>
@@ -72,12 +77,15 @@ export default function Footer() {
         <div className="mt-12 flex flex-col gap-2 border-t border-white/15 pt-6 text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} PolyPOP. Todos los derechos reservados.</p>
           <div className="flex gap-6">
-            <a href="/privacidad.html" className="transition-colors hover:text-white">
+            <Link to="/support" className="transition-colors hover:text-white">
+              Soporte
+            </Link>
+            <Link to="/privacy" className="transition-colors hover:text-white">
               Privacidad
-            </a>
-            <a href="/terminos.html" className="transition-colors hover:text-white">
+            </Link>
+            <Link to="/terms" className="transition-colors hover:text-white">
               Términos
-            </a>
+            </Link>
           </div>
         </div>
       </div>
