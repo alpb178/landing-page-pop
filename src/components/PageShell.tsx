@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
+import Footer from "./Footer";
 
 interface PageShellProps {
   /** Page <h1>. */
@@ -11,9 +12,9 @@ interface PageShellProps {
 
 /**
  * Shared chrome for the standalone PolyPOP pages (legal, support…): a minimal
- * sticky header (logo → home + "Volver al inicio"), a teal title band, and a
- * minimal footer. Self-contained — does not rely on the home page's in-page
- * anchor navigation.
+ * sticky header (logo → home + "Volver al inicio"), a teal title band, and the
+ * same full <Footer /> used on the home page so the footer is consistent across
+ * every page.
  */
 export default function PageShell({ title, subtitle, children }: PageShellProps) {
   return (
@@ -53,15 +54,8 @@ export default function PageShell({ title, subtitle, children }: PageShellProps)
         {children}
       </main>
 
-      {/* Minimal footer */}
-      <footer className="bg-gradient-to-b from-[#1fb3ae] to-[#168a86] text-white">
-        <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-2 px-6 py-10 text-sm text-white/80 sm:flex-row sm:items-center sm:justify-between lg:px-12">
-          <p>© {new Date().getFullYear()} PolyPOP. Todos los derechos reservados.</p>
-          <Link href="/" className="transition-colors hover:text-white">
-            Volver al inicio
-          </Link>
-        </div>
-      </footer>
+      {/* Same full footer as the home page */}
+      <Footer />
     </div>
   );
 }
