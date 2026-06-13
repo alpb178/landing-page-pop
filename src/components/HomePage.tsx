@@ -1,29 +1,26 @@
+"use client";
+
 import { useEffect, useState } from "react";
-import { MODES, type ModeId } from "./data/content";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import ModeTabs from "./components/ModeTabs";
-import MockupGallery from "./components/MockupGallery";
-import Tagline from "./components/Tagline";
-import FeatureCards from "./components/FeatureCards";
-import DownloadBanner from "./components/DownloadBanner";
-import Footer from "./components/Footer";
+import { MODES, type ModeId } from "../data/content";
+import Navbar from "./Navbar";
+import Hero from "./Hero";
+import ModeTabs from "./ModeTabs";
+import MockupGallery from "./MockupGallery";
+import Tagline from "./Tagline";
+import FeatureCards from "./FeatureCards";
+import DownloadBanner from "./DownloadBanner";
+import Footer from "./Footer";
 
-function initialMode(): ModeId {
-  if (typeof window !== "undefined") {
-    const param = new URLSearchParams(window.location.search).get("mode");
-    if (param === "date" || param === "circle") return param;
-  }
-  return "circle";
-}
-
-export default function App() {
-  const [mode, setMode] = useState<ModeId>(initialMode);
+export default function HomePage() {
+  const [mode, setMode] = useState<ModeId>("circle");
   const content = MODES[mode];
 
-  // Restore the home tab title when navigating back from another SPA route.
+  // Pick up a deep-linked ?mode= on mount. Done in an effect (not the initial
+  // state) so server and client render the same markup and avoid a hydration
+  // mismatch.
   useEffect(() => {
-    document.title = "PolyPOP · Conecta con tu POP perfecto";
+    const param = new URLSearchParams(window.location.search).get("mode");
+    if (param === "date" || param === "circle") setMode(param);
   }, []);
 
   // Keep the URL in sync so the active mode is shareable/deep-linkable.

@@ -1,5 +1,5 @@
-import { useEffect, type ReactNode } from "react";
-import { Link } from "react-router-dom";
+import type { ReactNode } from "react";
+import Link from "next/link";
 
 interface PageShellProps {
   /** Page <h1>. */
@@ -16,17 +16,12 @@ interface PageShellProps {
  * anchor navigation.
  */
 export default function PageShell({ title, subtitle, children }: PageShellProps) {
-  // SPA routes share one document, so set the tab title per page.
-  useEffect(() => {
-    document.title = `${title} · PolyPOP`;
-  }, [title]);
-
   return (
     <div className="flex min-h-screen flex-col bg-white font-body text-ink">
       {/* Minimal header — logo links back home */}
       <header className="sticky top-0 z-50 w-full border-b border-black/5 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-6 py-4 lg:px-12 lg:py-5">
-          <Link to="/" className="flex shrink-0 items-center" aria-label="PolyPOP — inicio">
+          <Link href="/" className="flex shrink-0 items-center" aria-label="PolyPOP — inicio">
             <img
               src="/assets/logo.svg"
               alt="PolyPOP"
@@ -36,7 +31,7 @@ export default function PageShell({ title, subtitle, children }: PageShellProps)
             />
           </Link>
           <Link
-            to="/"
+            href="/"
             className="rounded-lg px-4 py-2 text-base font-medium text-ink-black transition-colors hover:text-teal-text"
           >
             Volver al inicio
@@ -62,7 +57,7 @@ export default function PageShell({ title, subtitle, children }: PageShellProps)
       <footer className="bg-gradient-to-b from-[#1fb3ae] to-[#168a86] text-white">
         <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-2 px-6 py-10 text-sm text-white/80 sm:flex-row sm:items-center sm:justify-between lg:px-12">
           <p>© {new Date().getFullYear()} PolyPOP. Todos los derechos reservados.</p>
-          <Link to="/" className="transition-colors hover:text-white">
+          <Link href="/" className="transition-colors hover:text-white">
             Volver al inicio
           </Link>
         </div>

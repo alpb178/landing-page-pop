@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { NAV_LINKS } from "../data/content";
 
