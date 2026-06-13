@@ -39,7 +39,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${jakarta.variable} ${dmSans.variable}`}>
+    <html
+      lang="es"
+      data-scroll-behavior="smooth"
+      className={`${jakarta.variable} ${dmSans.variable}`}
+    >
       <body>{children}</body>
     </html>
   );
