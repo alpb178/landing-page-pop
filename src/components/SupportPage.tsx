@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, type FormEvent } from "react";
 import { SUPPORT_EMAIL } from "../data/content";
 import PageShell from "./PageShell";

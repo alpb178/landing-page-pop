@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { DOWNLOAD_QR, NAV_LINKS, STORE_LINKS } from "../data/content";
 
 const COLUMNS = [
@@ -77,13 +77,13 @@ export default function Footer() {
         <div className="mt-12 flex flex-col gap-2 border-t border-white/15 pt-6 text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} PolyPOP. Todos los derechos reservados.</p>
           <div className="flex gap-6">
-            <Link to="/support" className="transition-colors hover:text-white">
+            <Link href="/support" className="transition-colors hover:text-white">
               Soporte
             </Link>
-            <Link to="/privacy" className="transition-colors hover:text-white">
+            <Link href="/privacy" className="transition-colors hover:text-white">
               Privacidad
             </Link>
-            <Link to="/terms" className="transition-colors hover:text-white">
+            <Link href="/terms" className="transition-colors hover:text-white">
               Términos
             </Link>
           </div>

@@ -1,4 +1,7 @@
+"use client";
+
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { STORE_LINKS } from "../data/content";
 
 /**
@@ -10,7 +13,6 @@ export default function DownloadRedirect() {
   const [showFallback, setShowFallback] = useState(false);
 
   useEffect(() => {
-    document.title = "Descargar PolyPOP";
     const ua = navigator.userAgent || "";
     const isIOS =
       /iPad|iPhone|iPod/i.test(ua) ||
@@ -51,9 +53,9 @@ export default function DownloadRedirect() {
             >
               Descargar para Android (Google Play)
             </a>
-            <a href="/" className="text-sm text-white/85 underline underline-offset-2">
+            <Link href="/" className="text-sm text-white/85 underline underline-offset-2">
               Volver al inicio
-            </a>
+            </Link>
           </div>
         </>
       ) : (

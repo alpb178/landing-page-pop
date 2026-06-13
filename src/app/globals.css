@@ -3,13 +3,14 @@
 /* ----------------------------------------------------------------------------
    Design tokens (from the PolyPOP Figma variables)
    These map to Tailwind v4 utilities, e.g. --color-teal -> bg-teal / text-teal,
-   --font-display -> font-display.
+   --font-display -> font-display. The font families are provided by next/font
+   (see src/app/layout.tsx), which exposes them as the CSS variables below.
 ---------------------------------------------------------------------------- */
 @theme {
-  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system,
+  --font-display: var(--font-jakarta), ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", sans-serif;
-  --font-body: "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-    sans-serif;
+  --font-body: var(--font-dm), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
 
   /* Foundation / Green */
   --color-teal: #1fb3ae;
