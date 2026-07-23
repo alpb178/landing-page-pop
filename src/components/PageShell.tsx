@@ -11,7 +11,7 @@ interface PageShellProps {
 }
 
 /**
- * Shared chrome for the standalone PolyPOP pages (legal, support…): a minimal
+ * Shared chrome for the standalone Popyplan pages (legal, support…): a minimal
  * sticky header (logo → home + "Volver al inicio"), a teal title band, and the
  * same full <Footer /> used on the home page so the footer is consistent across
  * every page.
@@ -22,10 +22,10 @@ export default function PageShell({ title, subtitle, children }: PageShellProps)
       {/* Minimal header — logo links back home */}
       <header className="sticky top-0 z-50 w-full border-b border-black/5 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-6 py-4 lg:px-12 lg:py-5">
-          <Link href="/" className="flex shrink-0 items-center" aria-label="PolyPOP — inicio">
+          <Link href="/" className="flex shrink-0 items-center" aria-label="Popyplan — inicio">
             <img
               src="/assets/logo.svg"
-              alt="PolyPOP"
+              alt="Popyplan"
               width={79}
               height={52}
               className="h-11 w-[67px] object-contain sm:h-[52px] sm:w-[79px]"

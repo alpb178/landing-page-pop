@@ -18,7 +18,7 @@ export default function SupportPage() {
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const finalSubject = subject.trim() || "Soporte PolyPOP";
+    const finalSubject = subject.trim() || "Soporte Popyplan";
     const mailto = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(
       finalSubject,
     )}&body=${encodeURIComponent(message)}`;

@@ -60,7 +60,7 @@ export default function DownloadBanner({ content }: DownloadBannerProps) {
               <img
                 key={`${content.id}-big`}
                 src={content.banner.big}
-                alt={`Descarga PolyPOP — ${content.label}`}
+                alt={`Descarga Popyplan — ${content.label}`}
                 loading="lazy"
                 decoding="async"
                 className="absolute -top-28 right-0 z-10 w-[316px] animate-fade-in drop-shadow-2xl xl:right-6 xl:w-[338px]"
@@ -72,7 +72,7 @@ export default function DownloadBanner({ content }: DownloadBannerProps) {
           <div className="relative mt-10 flex justify-center lg:hidden">
             <img
               src={content.banner.big}
-              alt={`Descarga PolyPOP — ${content.label}`}
+              alt={`Descarga Popyplan — ${content.label}`}
               loading="lazy"
               decoding="async"
               className="w-[230px] drop-shadow-2xl sm:w-[250px]"

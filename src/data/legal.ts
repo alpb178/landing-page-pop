@@ -1,5 +1,5 @@
 /**
- * Shared content model for PolyPOP's legal pages (Privacy Policy, Terms).
+ * Shared content model for Popyplan's legal pages (Privacy Policy, Terms).
  *
  * Both documents render through the same <LegalPage> component, so they share
  * one structure. Inline emphasis is expressed via the optional `term` label;

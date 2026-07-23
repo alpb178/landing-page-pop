@@ -1,5 +1,5 @@
 /**
- * Content model for the PolyPOP landing page.
+ * Content model for the Popyplan landing page.
  *
  * The Figma design ships two variants of the same page — "POP Circle"
  * (community / friends) and "POP Date" (dating). They share one layout and
@@ -135,7 +135,7 @@ export const STORE_LINKS = {
  */
 export const DOWNLOAD_QR = {
   src: "/assets/qr-download.svg",
-  alt: "Código QR para descargar PolyPOP (iOS o Android)",
+  alt: "Código QR para descargar Popyplan (iOS o Android)",
   /** Where the QR points; also used as the in-page link for desktop clicks. */
   href: "/download",
 } as const;
