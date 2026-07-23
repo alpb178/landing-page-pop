@@ -32,7 +32,7 @@ export default function MockupGallery({ content }: MockupGalleryProps) {
         />
         <img
           src={content.gallery.center}
-          alt={`Mockups de la app PolyPOP — ${content.label}`}
+          alt={`Mockups de la app Popyplan — ${content.label}`}
           loading="lazy"
           decoding="async"
           className="relative z-10 -mx-8 w-[210px] sm:-mx-10 sm:w-[230px] md:-mx-16 md:w-[300px] lg:-mx-24 lg:w-[360px]"

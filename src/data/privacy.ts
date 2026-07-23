@@ -1,15 +1,15 @@
 import type { LegalDoc } from "./legal";
 
 /**
- * Privacy Policy content for PolyPOP, mirrored verbatim from the canonical
+ * Privacy Policy content for Popyplan, mirrored verbatim from the canonical
  * policy published at https://pop.corpsc.com/ (last updated 23 de marzo de
- * 2026). Only the app name was rebranded Pop -> PolyPOP to match the landing.
+ * 2026). Only the app name was rebranded Pop -> Popyplan to match the landing.
  */
 export const PRIVACY_DOC: LegalDoc = {
   title: "Política de Privacidad",
   updated: "Última actualización: 23 de marzo de 2026",
   intro:
-    'PolyPOP ("nosotros", "nuestra" o "la aplicación") se compromete a proteger la privacidad de sus usuarios. Esta Política de Privacidad describe cómo recopilamos, usamos, almacenamos y compartimos tu información cuando utilizas nuestra aplicación móvil.',
+    'Popyplan ("nosotros", "nuestra" o "la aplicación") se compromete a proteger la privacidad de sus usuarios. Esta Política de Privacidad describe cómo recopilamos, usamos, almacenamos y compartimos tu información cuando utilizas nuestra aplicación móvil.',
   sections: [
     {
       title: "1. Información que recopilamos",
@@ -141,7 +141,7 @@ export const PRIVACY_DOC: LegalDoc = {
       blocks: [
         {
           kind: "paragraph",
-          text: "Conservamos tu información mientras mantengas una cuenta activa en PolyPOP. Si eliminas tu cuenta, procederemos a eliminar tus datos personales en un plazo máximo de 30 días, salvo que la ley requiera su conservación por un período mayor.",
+          text: "Conservamos tu información mientras mantengas una cuenta activa en Popyplan. Si eliminas tu cuenta, procederemos a eliminar tus datos personales en un plazo máximo de 30 días, salvo que la ley requiera su conservación por un período mayor.",
         },
       ],
     },
@@ -167,7 +167,7 @@ export const PRIVACY_DOC: LegalDoc = {
       blocks: [
         {
           kind: "paragraph",
-          text: "PolyPOP está dirigida exclusivamente a personas mayores de 18 años. No recopilamos intencionalmente información de menores de edad. Si detectamos que un menor se ha registrado, procederemos a eliminar su cuenta y datos de inmediato.",
+          text: "Popyplan está dirigida exclusivamente a personas mayores de 18 años. No recopilamos intencionalmente información de menores de edad. Si detectamos que un menor se ha registrado, procederemos a eliminar su cuenta y datos de inmediato.",
         },
       ],
     },
@@ -176,7 +176,7 @@ export const PRIVACY_DOC: LegalDoc = {
       blocks: [
         {
           kind: "paragraph",
-          text: "Podemos actualizar esta Política de Privacidad periódicamente. Te notificaremos de cambios significativos a través de la aplicación o por correo electrónico. El uso continuado de PolyPOP después de dichos cambios constituye tu aceptación de la política actualizada.",
+          text: "Podemos actualizar esta Política de Privacidad periódicamente. Te notificaremos de cambios significativos a través de la aplicación o por correo electrónico. El uso continuado de Popyplan después de dichos cambios constituye tu aceptación de la política actualizada.",
         },
       ],
     },

@@ -12,7 +12,7 @@ export default function Navbar() {
         aria-label="Principal"
         className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-6 py-4 lg:px-12 lg:py-5"
       >
-        <a href="#inicio" className="flex shrink-0 items-center" aria-label="PolyPOP — inicio">
+        <a href="#inicio" className="flex shrink-0 items-center" aria-label="Popyplan — inicio">
           <img
             src="/assets/logo.svg"
             alt=""

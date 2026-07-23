@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import DownloadRedirect from "@/components/DownloadRedirect";
 
 export const metadata: Metadata = {
-  title: "Descargar PolyPOP",
-  description: "Descarga PolyPOP — te llevamos a la tienda de tu dispositivo.",
+  title: "Descargar Popyplan",
+  description: "Descarga Popyplan — te llevamos a la tienda de tu dispositivo.",
   robots: { index: false },
 };
 

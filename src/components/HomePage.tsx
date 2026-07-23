@@ -39,7 +39,7 @@ export default function HomePage() {
 
         {/* Mode switcher + device gallery + tagline */}
         <section id="nosotros" className="relative scroll-mt-24">
-          <h2 className="sr-only">Conoce PolyPOP</h2>
+          <h2 className="sr-only">Conoce Popyplan</h2>
           <div className="flex flex-col gap-10 pt-16 lg:gap-14 lg:pt-24">
             <ModeTabs mode={mode} onChange={setMode} />
             <MockupGallery content={content} />

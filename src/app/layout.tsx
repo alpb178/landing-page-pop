@@ -20,9 +20,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "PolyPOP · Conecta con tu POP perfecto",
+  title: "Popyplan · Conecta con tu POP perfecto",
   description:
-    "PolyPOP — Lo mejor pasa cuando las burbujas se encuentran. Conecta con tu POP perfecto. Descarga la app gratis.",
+    "Popyplan — Lo mejor pasa cuando las burbujas se encuentran. Conecta con tu POP perfecto. Descarga la app gratis.",
   icons: {
     icon: "/assets/favicon-256.png",
     apple: "/assets/app-icon.png",

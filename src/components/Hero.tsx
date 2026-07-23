@@ -68,7 +68,7 @@ export default function Hero({ content }: HeroProps) {
             <img
               key={content.id}
               src={content.hero}
-              alt={`Vista de la app PolyPOP — ${content.label}`}
+              alt={`Vista de la app Popyplan — ${content.label}`}
               decoding="async"
               fetchPriority="high"
               className="relative z-10 w-full drop-shadow-2xl"
