@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ----------------------------------------------------------------------------
-   Design tokens (from the PolyPOP Figma variables)
+   Design tokens (from the Popyplan Figma variables)
    These map to Tailwind v4 utilities, e.g. --color-teal -> bg-teal / text-teal,
    --font-display -> font-display. The font families are provided by next/font
    (see src/app/layout.tsx), which exposes them as the CSS variables below.

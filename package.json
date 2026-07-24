@@ -2,7 +2,7 @@
   "name": "landing-page-tikneo",
   "private": true,
   "version": "0.1.0",
-  "description": "PolyPOP marketing landing page — Next.js 16 + Tailwind v4.",
+  "description": "Popyplan marketing landing page — Next.js 16 + Tailwind v4.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

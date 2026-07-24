@@ -3,9 +3,9 @@ import LegalPage from "@/components/LegalPage";
 import { PRIVACY_DOC } from "@/data/privacy";
 
 export const metadata: Metadata = {
-  title: "Política de Privacidad · PolyPOP",
+  title: "Política de Privacidad · Popyplan",
   description:
-    "Política de Privacidad de PolyPOP — cómo recopilamos, usamos, almacenamos y compartimos tu información.",
+    "Política de Privacidad de Popyplan — cómo recopilamos, usamos, almacenamos y compartimos tu información.",
 };
 
 export default function Page() {

@@ -1,7 +1,7 @@
 import type { LegalDoc } from "./legal";
 
 /**
- * Terms of Service for PolyPOP. There was no published terms page to mirror
+ * Terms of Service for Popyplan. There was no published terms page to mirror
  * (https://pop.corpsc.com/ only hosts the privacy policy), so this is an
  * original draft consistent with the app's social/dating features and the
  * privacy policy's tone, structure, and contact channel.
@@ -10,21 +10,21 @@ export const TERMS_DOC: LegalDoc = {
   title: "Términos y Condiciones",
   updated: "Última actualización: 23 de marzo de 2026",
   intro:
-    'Estos Términos y Condiciones ("Términos") regulan el uso de PolyPOP ("nosotros", "nuestra" o "la aplicación"). Al crear una cuenta o utilizar la aplicación, aceptas estos Términos en su totalidad. Si no estás de acuerdo con ellos, no debes utilizar PolyPOP.',
+    'Estos Términos y Condiciones ("Términos") regulan el uso de Popyplan ("nosotros", "nuestra" o "la aplicación"). Al crear una cuenta o utilizar la aplicación, aceptas estos Términos en su totalidad. Si no estás de acuerdo con ellos, no debes utilizar Popyplan.',
   sections: [
     {
       title: "1. Aceptación de los Términos",
       blocks: [
         {
           kind: "paragraph",
-          text: "Al registrarte, acceder o utilizar PolyPOP confirmas que has leído, entendido y aceptado estos Términos, así como nuestra Política de Privacidad. Si utilizas la aplicación en nombre de un tercero, declaras contar con la autorización para hacerlo.",
+          text: "Al registrarte, acceder o utilizar Popyplan confirmas que has leído, entendido y aceptado estos Términos, así como nuestra Política de Privacidad. Si utilizas la aplicación en nombre de un tercero, declaras contar con la autorización para hacerlo.",
         },
       ],
     },
     {
       title: "2. Requisitos de elegibilidad",
       blocks: [
-        { kind: "paragraph", text: "Para usar PolyPOP debes:" },
+        { kind: "paragraph", text: "Para usar Popyplan debes:" },
         {
           kind: "list",
           items: [
@@ -61,7 +61,7 @@ export const TERMS_DOC: LegalDoc = {
       blocks: [
         {
           kind: "paragraph",
-          text: "PolyPOP es una comunidad basada en el respeto. Al usar la aplicación te comprometes a no:",
+          text: "Popyplan es una comunidad basada en el respeto. Al usar la aplicación te comprometes a no:",
         },
         {
           kind: "list",
@@ -103,7 +103,7 @@ export const TERMS_DOC: LegalDoc = {
               text: "Las funciones de descubrimiento y matching se ofrecen sin garantía de obtener conexiones o resultados específicos.",
             },
             {
-              text: "Los planes y eventos sociales mostrados en la aplicación pueden ser organizados por terceros; PolyPOP no se responsabiliza de su realización ni de su contenido.",
+              text: "Los planes y eventos sociales mostrados en la aplicación pueden ser organizados por terceros; Popyplan no se responsabiliza de su realización ni de su contenido.",
             },
             {
               text: "Cualquier interacción o encuentro con otros usuarios ocurre bajo tu propia responsabilidad. Te recomendamos tomar precauciones de seguridad.",
@@ -117,7 +117,7 @@ export const TERMS_DOC: LegalDoc = {
       blocks: [
         {
           kind: "paragraph",
-          text: "PolyPOP puede ofrecer funciones de pago o suscripciones. Si adquieres alguna de ellas:",
+          text: "Popyplan puede ofrecer funciones de pago o suscripciones. Si adquieres alguna de ellas:",
         },
         {
           kind: "list",
@@ -149,7 +149,7 @@ export const TERMS_DOC: LegalDoc = {
       blocks: [
         {
           kind: "paragraph",
-          text: 'PolyPOP se ofrece "tal cual" y "según disponibilidad". En la máxima medida permitida por la ley, no garantizamos que la aplicación esté libre de errores o interrupciones, ni nos hacemos responsables de daños indirectos, incidentales o derivados del uso de la aplicación o de las interacciones entre usuarios.',
+          text: 'Popyplan se ofrece "tal cual" y "según disponibilidad". En la máxima medida permitida por la ley, no garantizamos que la aplicación esté libre de errores o interrupciones, ni nos hacemos responsables de daños indirectos, incidentales o derivados del uso de la aplicación o de las interacciones entre usuarios.',
         },
       ],
     },
@@ -158,7 +158,7 @@ export const TERMS_DOC: LegalDoc = {
       blocks: [
         {
           kind: "paragraph",
-          text: "Podemos actualizar estos Términos periódicamente. Te notificaremos de cambios significativos a través de la aplicación o por correo electrónico. El uso continuado de PolyPOP después de dichos cambios constituye tu aceptación de los Términos actualizados.",
+          text: "Podemos actualizar estos Términos periódicamente. Te notificaremos de cambios significativos a través de la aplicación o por correo electrónico. El uso continuado de Popyplan después de dichos cambios constituye tu aceptación de los Términos actualizados.",
         },
       ],
     },

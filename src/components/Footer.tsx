@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="flex flex-col gap-10 sm:flex-row sm:gap-16 lg:gap-24">
             <img
               src="/assets/logo-white.svg"
-              alt="PolyPOP"
+              alt="Popyplan"
               width={133}
               height={88}
               className="h-[72px] w-[108px] object-contain lg:h-[88px] lg:w-[133px]"
@@ -75,7 +75,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col gap-2 border-t border-white/15 pt-6 text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} PolyPOP. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Popyplan. Todos los derechos reservados.</p>
           <div className="flex gap-6">
             <Link href="/support" className="transition-colors hover:text-white">
               Soporte

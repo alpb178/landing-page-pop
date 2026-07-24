@@ -31,11 +31,11 @@ export default function DownloadRedirect() {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-6 bg-gradient-to-b from-[#1fb3ae] to-[#168a86] px-6 text-center font-display text-white">
-      <img src="/assets/logo-white.svg" alt="PolyPOP" className="w-[120px]" />
+      <img src="/assets/logo-white.svg" alt="Popyplan" className="w-[120px]" />
 
       {showFallback ? (
         <>
-          <p className="text-lg font-semibold">Descarga PolyPOP en tu tienda de aplicaciones</p>
+          <p className="text-lg font-semibold">Descarga Popyplan en tu tienda de aplicaciones</p>
           <div className="flex w-full max-w-[360px] flex-col gap-3">
             <a
               href={STORE_LINKS.appStore}

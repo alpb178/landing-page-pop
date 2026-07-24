@@ -15,7 +15,7 @@ interface ModeTabsProps {
  */
 export default function ModeTabs({ mode, onChange }: ModeTabsProps) {
   return (
-    <div role="group" aria-label="Modo de PolyPOP" className="flex justify-center px-6">
+    <div role="group" aria-label="Modo de Popyplan" className="flex justify-center px-6">
       <div className="inline-flex items-center gap-2 rounded-full bg-[linear-gradient(170deg,rgba(214,253,252,0.45)_6%,rgba(130,104,201,0.18)_96%)] p-2">
         {MODE_ORDER.map((id) => {
           const active = id === mode;
