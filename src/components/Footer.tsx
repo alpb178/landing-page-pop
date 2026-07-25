@@ -65,7 +65,11 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="size-[120px] shrink-0 rounded-2xl bg-white p-2 sm:size-[200px] sm:p-2.5"
             >
-              <img src={DOWNLOAD_QR.src} alt={DOWNLOAD_QR.alt} className="h-full w-full" />
+              <img
+                src={DOWNLOAD_QR.src}
+                alt={DOWNLOAD_QR.alt}
+                className="h-full w-full"
+              />
             </a>
             <p className="flex-1 text-right text-base font-bold leading-[1.2] text-white sm:w-[197px] sm:flex-none sm:text-xl">
               Escanea el código QR para descargar la aplicación
@@ -75,16 +79,31 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col gap-2 border-t border-white/15 pt-6 text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Popyplan. Todos los derechos reservados.</p>
+          <p>
+            © {new Date().getFullYear()} Popyplan. Todos los derechos
+            reservados.
+          </p>
           <div className="flex gap-6">
-            <Link href="/support" className="transition-colors hover:text-white">
+            <Link
+              href="/support"
+              className="transition-colors hover:text-white"
+            >
               Soporte
             </Link>
-            <Link href="/privacy" className="transition-colors hover:text-white">
+            <Link
+              href="/privacy"
+              className="transition-colors hover:text-white"
+            >
               Privacidad
             </Link>
             <Link href="/terms" className="transition-colors hover:text-white">
               Términos
+            </Link>
+            <Link
+              href="/delete-account"
+              className="transition-colors hover:text-white"
+            >
+              Eliminar cuenta
             </Link>
           </div>
         </div>
